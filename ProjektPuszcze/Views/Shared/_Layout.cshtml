@@ -1,0 +1,97 @@
+﻿<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <meta name="description" content="Projekt Puszcze - pieszo przez wszystkie puszcze w Polsce" />
+</head>
+<body>
+    <div id="menu">
+        <ul class="list-inline" style="padding-left: 50px; margin-bottom: 0px;">
+            <li><a href="@Url.Action("Index", "Home")">STRONA GŁÓWNA</a></li>
+            <li><a href="@Url.Action("Dzialalnosc", "Home")">DZIAŁALNOŚĆ</a></li>
+            <li style="float: right; margin-right: 100px;"><a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/"><img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></li>
+            <li style="float: right; color: lightgray;"><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope"></span>  KONTAKT</a></li>
+        </ul>
+    </div>
+    <!-- Modal -->
+    @Html.Partial("_MailFormView")
+                    @*<div class="form-group">
+                        <label>Adres e-mail: </label>
+                        <input type="text" class="form-control" id="mail"/>
+                        <label>Treść wiadomości: </label>
+                        <textarea class="form-control" rows="10" id="message"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>*@
+
+    <div class="container">
+        <a href="@Url.Action("Index", "Home")">
+            <img class="img-responsive" style="margin:auto" alt="PROJEKT PUSZCZE" src="@Url.Content("~/Content/header.jpg")" />
+        </a>
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <div id="footer">
+        <p>Projekt Puszcze 2016 &copy;<br />
+        email@email.pl<br />
+        <a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">Odwiedź nas na FB ! <img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></p>
+    </div>
+
+</body>
+</html>
+
+
+<style>
+    body {
+        background-image: url('../../Content/bg.png');
+    }
+    div#menu {
+        background: black;
+        /*position: fixed;*/
+        width: 100%;
+    }
+    ul li{
+        padding: 15px 0 15px 0;
+        font-family: Tahoma;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    } 
+    ul li a{
+        padding: 15px;
+        font-family: Tahoma;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    ul li a:hover{
+        background: rgba(30,30,30,1);
+        color: lightgray;
+        text-decoration: none;
+    }
+    div#footer{
+        background: black;
+        height: 100px;
+        width:100%;
+        position: relative;
+    }
+    div#footer p{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        color: lightgray;
+    }
+
+   
+</style>
