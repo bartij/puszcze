@@ -10,25 +10,13 @@
 </head>
 <body>
     <div id="menu">
-        <ul class="list-inline" style="padding-left: 50px; margin-bottom: 0px;">
+        <ul class="list-inline">
             <li><a href="@Url.Action("Index", "Home")">STRONA GŁÓWNA</a></li>
             <li><a href="@Url.Action("Dzialalnosc", "Home")">DZIAŁALNOŚĆ</a></li>
-            <li style="float: right; margin-right: 100px;"><a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/"><img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></li>
-            <li style="float: right; color: lightgray;"><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-envelope"></span>  KONTAKT</a></li>
+            <li style="color: lightgray;"><a data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-envelope"></span>  KONTAKT</a></li>
+            <li style="right: 20px"><a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/"><img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></li>
         </ul>
     </div>
-    <!-- Modal -->
-    @Html.Partial("_MailFormView")
-                    @*<div class="form-group">
-                        <label>Adres e-mail: </label>
-                        <input type="text" class="form-control" id="mail"/>
-                        <label>Treść wiadomości: </label>
-                        <textarea class="form-control" rows="10" id="message"></textarea>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>*@
 
     <div class="container">
         <a href="@Url.Action("Index", "Home")">
@@ -39,9 +27,11 @@
         @RenderBody()
     </div>
     <div id="footer">
-        <p>Projekt Puszcze 2016 &copy;<br />
-        email@email.pl<br />
-        <a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">Odwiedź nas na FB ! <img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></p>
+        <div id="projektPuszcze">P R O J E K T  P U S Z C Z E  &copy;</div>
+        <p id="email">
+            email@email.pl<br />
+            <a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">Odwiedź nas na FB ! <img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a>
+        </p>
     </div>
 
 </body>
@@ -56,6 +46,10 @@
         background: black;
         /*position: fixed;*/
         width: 100%;
+    }
+    ul {
+        margin-bottom: 0px;
+        text-align: center;
     }
     ul li{
         padding: 15px 0 15px 0;
@@ -79,11 +73,11 @@
     }
     div#footer{
         background: black;
-        height: 100px;
-        width:100%;
+        height: 8vh;
+        width: 100%;
         position: relative;
     }
-    div#footer p{
+    #email {
         margin: 0;
         position: absolute;
         top: 50%;
@@ -92,6 +86,11 @@
         transform: translate(-50%, -50%);
         color: lightgray;
     }
-
-   
+    #projektPuszcze {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: rgba(211,211,211,0.2);
+        font-size: 6vh;
+    }
 </style>
