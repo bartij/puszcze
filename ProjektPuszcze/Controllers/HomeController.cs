@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using ProjektPuszcze.Models;
-using System.Net;
-using System.Net.Mail;
-using System.Threading.Tasks;
+﻿using System.Web.Mvc;
 
 namespace ProjektPuszcze.Controllers
 {
@@ -18,6 +10,10 @@ namespace ProjektPuszcze.Controllers
             return View();
         }
         public ActionResult Dzialalnosc()
+        {
+            return View();
+        }
+        public ActionResult Kontakt()
         {
             return View();
         }

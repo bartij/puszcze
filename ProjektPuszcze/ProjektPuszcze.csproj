@@ -134,10 +134,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\dariusz_icon.png" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\ajax-loader.png" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery.mobile-1.1.0.css" />
+    <Content Include="Content\jquery.mobile-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.1.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.1.0.min.css" />
     <Content Include="Content\konrad2.jpg" />
+    <Content Include="Content\konrad_icon.png" />
+    <Content Include="Content\kontakt.jpg" />
     <Content Include="Content\piechur.png" />
     <Content Include="Content\rafal2.jpg" />
     <Content Include="Content\rafal3.jpg" />
+    <Content Include="Content\rafal_icon.png" />
+    <Content Include="Content\seweryn_icon.png" />
+    <Content Include="Content\Site.Mobile.css" />
     <Content Include="Content\Sponsors\baribal.png" />
     <Content Include="Content\Sponsors\fogt.png" />
     <Content Include="Content\Sponsors\gora.png" />
@@ -165,6 +183,7 @@
     <Content Include="Content\Sponsors\outdorzy.jpg" />
     <Content Include="Content\Sponsors\naostrzu.png" />
     <Content Include="Content\serweryn.png" />
+    <Content Include="Content\Styles\Styles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -183,18 +202,21 @@
     <Content Include="scripts\jquery-1.11.3.min.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\jquery.mobile-1.1.0.js" />
+    <Content Include="scripts\jquery.mobile-1.1.0.min.js" />
     <Content Include="scripts\jssor.slider.debug.js" />
     <Content Include="scripts\jssor.slider.min.js" />
     <Content Include="scripts\jssor.slider.mini.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleMobileConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ViewSwitcherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +229,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Dzialalnosc.cshtml" />
+    <Content Include="Views\Home\Index.mobile.cshtml" />
+    <Content Include="Views\Shared\_ViewSwitcher.cshtml" />
+    <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\Home\Dzialalnosc.mobile.cshtml" />
+    <Content Include="Views\Home\Kontakt.mobile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,6 +243,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

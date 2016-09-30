@@ -2,19 +2,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Styles/Styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
+    <title>@ViewBag.Title</title>
     <meta name="description" content="Projekt Puszcze - pieszo przez wszystkie puszcze w Polsce" />
 </head>
 <body>
     <div id="menu">
         <ul class="list-inline">
-            <li><a href="@Url.Action("Index", "Home")">STRONA GŁÓWNA</a></li>
+            <li><a href="@Url.Action("Index", "Home")">O PROJEKCIE</a></li>
             <li><a href="@Url.Action("Dzialalnosc", "Home")">DZIAŁALNOŚĆ</a></li>
-            <li style="color: lightgray;"><a data-toggle="modal" data-target="#"><span class="glyphicon glyphicon-envelope"></span>  KONTAKT</a></li>
-            <li style="right: 20px"><a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/"><img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></li>
+            <li style="color: lightgray;"><a href="#footer"><span class="glyphicon glyphicon-envelope"></span>  KONTAKT</a></li>
+            <li><a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/" target="_blank"><img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a></li>
         </ul>
     </div>
 
@@ -29,8 +30,8 @@
     <div id="footer">
         <div id="projektPuszcze">P R O J E K T  P U S Z C Z E  &copy;</div>
         <p id="email">
-            email@email.pl<br />
-            <a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">Odwiedź nas na FB ! <img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a>
+            Zachęcamy do kontaktu drogą mailową: <b>email@email.pl</b><br />
+            <a href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">oraz poprzez nasz Fanpage! <img width="25" height="25" alt="FB" src="@Url.Content("~/Content/FB.png")" /></a>
         </p>
     </div>
 
@@ -49,7 +50,8 @@
     }
     ul {
         margin-bottom: 0px;
-        text-align: center;
+        text-align: right;
+        margin-right: 5%;
     }
     ul li{
         padding: 15px 0 15px 0;
@@ -85,12 +87,13 @@
         margin-right: -50%;
         transform: translate(-50%, -50%);
         color: lightgray;
+        justify-content: center;
     }
     #projektPuszcze {
         height: 100%;
         width: 100%;
         text-align: center;
-        color: rgba(211,211,211,0.2);
+        color: rgba(211,211,211,0.1);
         font-size: 6vh;
     }
 </style>

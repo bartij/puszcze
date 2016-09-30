@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/Mobile/css", "~/Content/jquerymobile/css")
+    @Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")
+    <script>
+        $(document).ready(function () {
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
+    <link href="~/Content/Styles/Styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="navbar">
+        <ul>
+            <li><a href="@Url.Action("Index", "Home")">O Projekcie</a></li>
+            <li><a href="@Url.Action("Dzialalnosc", "Home")">Działalność</a></li>
+            <li><a href="@Url.Action("Kontakt", "Home")">Kontakt</a></li>
+        </ul>
+    </div>
+    <!-- /
+         -->
+    <div data-role="content">
+        @RenderSection("featured", false)
+        @RenderBody()
+    </div>
+
+</body>
+</html>

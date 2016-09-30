@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Projekt Puszcze";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+<body>
+    <a href="@Url.Action("Index", "Home")">
+        <img class="img-responsive" style="width: 100%;" alt="PROJEKT PUSZCZE" src="@Url.Content("~/Content/header.jpg")" />
+    </a>
+    <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+            <h3>O projekcie</h3>
+        </div>
+        <div class="ui-body ui-body-a">
+            <p>
+                W Polsce jest wiele przepięknych kompleksów leśnych, które niestety zostały przez nas
+                nieco zapomniane...
+                Dlatego też powstał projekt
+                <b>„Piechur - pieszo przez wszystkie puszcze w Polsce”</b>, którego celem jest poznanie i promocja dzikich terenów polskich puszczy. <br />
+            </p>
+            <p>
+            Celem niniejszego projektu jest również zachęcanie ludzi do aktywnego spędzania czasu, szczególnie na
+            łonie natury.
+            </p>
+        </div>
+    </div>
+    <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+            <h3>Uczestnicy projektu</h3>
+        </div>
+        <div class="ui-body ui-body-a" style="margin: 0; padding: 0">
+            <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true" style="margin: 0">
+                <li>
+                    <img alt="Seweryn Kubicki" src="@Url.Content("~/Content/seweryn_icon.png")" />
+                    <p>Seweryn Kubicki</p>
+                    <p id="desc">Pomysłodawca projektu</p>
+                </li>
+                <li>
+                    <img class="img-responsive" alt="Dariusz Mitręga" src="@Url.Content("~/Content/dariusz_icon.png")" />
+                    <p>Dariusz Mitręga</p>
+                    <p id="desc">Właściciel firmy Survival Team</p>
+                </li>
+                <li>
+                    <img class="img-responsive" alt="Konrad Busza" src="@Url.Content("~/Content/rafal_icon.png")" />
+                    <p>Konrad Busza</p>
+                    <p id="desc">Uczestnik projektu</p>
+                </li>
+                <li>
+                    <img class="img-responsive" alt="Rafał Bauer" src="@Url.Content("~/Content/konrad_icon.png")" />
+                    <p>Rafał Bauer</p>
+                    <p id="desc">Uczestnik projektu</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<style>
+    p {
+        text-indent: 10%;
+        font-size: 10px;
+        text-align: justify;
+    }
+    img {
+        width: 100%;
+    }
+    #desc {
+        font-size: 10px;
+    }
+</style>

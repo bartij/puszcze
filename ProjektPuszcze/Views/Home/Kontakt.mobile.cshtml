@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Kontakt - Projekt Puszcze";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+<body>
+    <ul data-role="listview">
+        <li data-role="list-divider">Zapraszamy do kontaktu !</li>
+    </ul>
+    <div class="img">
+        <a target="_blank" href="~/Content/kontakt.jpg">
+            <img src="~/Content/kontakt.jpg" alt="Kontakt">
+        </a>
+        <div class="desc">
+            <ul data-role="listview">
+                <li>
+                    <a style="font-size: 10px !important; text-align: center !important;" href="https://www.facebook.com/PieszoprzezwszystkiePuszczewPolsce/">
+                        Facebook Fanpage
+                    </a>
+                </li>
+                <li data-role="list-divider" style="font-size: 10px !important;">
+                    E-mail: <b>email@email.com</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<style>
+    p {
+        margin: auto;
+    }
+    div.img {
+        margin: 0;  
+        border: 1px solid #ccc;
+        width: 90vw;
+        height: 90vh;
+    }
+    div.img:hover {
+        border: 1px solid #777;
+    }
+
+    div.img img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        text-align: center;
+    }
+    div ul li {
+        text-align: center !important;
+    }
+</style>
